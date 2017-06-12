@@ -1,0 +1,9 @@
+{% extends 'hospital/base.html' %}
+{% block content %}
+
+<h1>종합시스템 Main Page</h1>
+
+<li> <a href = "{% url 'Dview'  %}"> 의사 메뉴로 이동합니다. </a></li>
+<li> <a href = "{% url 'reservation'  %}"> 환자 메뉴로 이동합니다. </a></li>
+
+{% endblock %}

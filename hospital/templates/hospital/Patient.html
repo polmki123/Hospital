@@ -1,0 +1,23 @@
+{% extends 'hospital/base.html' %}
+{% block content %}
+<div id="content">
+  <h1>reservations - {{user}}<h1>
+  <a href = "{%url 'reservationadd' %}">예약 날짜 잡기</a>
+  <table class="rservation-list">
+    <tr>
+      <th> 의사 &nbsp;</th>
+      <th> date </th>
+      <th></th>
+      <th></th>
+    </tr>
+  {% for item in object_list %}
+  <tr>
+    <td>{{item.doctor}}</td>
+    <td>{{item.reservation_Date}}</td>
+    <td><a href = "{%url 'reservdelete' item.id%}"> delete</a></td>
+    <td><a href = "{%url 'Patientreservationupdate' item.id%}"> update</a></td>
+  </tr>
+  {% endfor %}
+  </table>
+</div>
+{% endblock %}

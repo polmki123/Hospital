@@ -1,0 +1,13 @@
+{% extends 'hospital/base.html' %}
+{% block content %}
+<div id = 'content'>
+  <h1>{{object.name}}</h1>
+    <ul>
+    <li>환자 : {{object.patient}}</li>
+    <li>진료 방법 : {{object.treatmentContent}}</li>
+    <li>처방전: {{object.inscription}}</li>
+    <li>진료 날짜: {{object.treatment_Date}}</li>
+    <li> <a href = "{% url 'treatmentupdate' object.id %}"> 환자의 처방을 수정합니다 </a></li>
+    </ul>
+</div>
+{% endblock %}

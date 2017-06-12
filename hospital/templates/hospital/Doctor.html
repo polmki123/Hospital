@@ -1,0 +1,7 @@
+{% extends 'hospital/base.html' %}
+{% block content %}
+<h1> 의사 관리 시스템</h1>
+<li><a href = "{%url 'patient_list'%}"> 관리 환자 목록</a></li>
+<li><a href = "{%url 'treatment_list'%}"> 환자 진료 목록</a></li>
+<li><a href = "{%url 'reservation_list'%}"> 환자 예약 목록</a></li>
+{% endblock %}

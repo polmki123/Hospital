@@ -1,0 +1,11 @@
+{% extends 'hospital/base.html' %}
+{% block content %}
+<div id = 'content'>
+  <h1> Patient List</h1>
+    <ul>
+      {% for Patient in object_list %}
+        <li><a href = "{%url 'patient_detail' Patient.id%}"> {{Patient}}</a></li>
+        {% endfor %}
+  <ul>
+</div>
+{% endblock %}
